@@ -12,7 +12,7 @@
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-	<h1>Welcome In our Web site -Farm Managesmentss-</h1><br />
+	<h1>Welcome In our Web site -Farm-</h1><br />
 	<h3>to connect clic  <a href="se connecter.jsp">here</a></h3>
 	<%@ include file="menu.jsp"%> 
 	<%@ include file="footer.jsp"%>
