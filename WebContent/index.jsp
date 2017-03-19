@@ -12,7 +12,11 @@
 </head>
 <body>
 	<%@ include file="header.jsp"%>
+<<<<<<< HEAD
 	<h1>Welcome In our Web site : Farm Management</h1><br />
+=======
+	<h1>Welcome In our Web site -Farm Management-</h1><br />
+>>>>>>> branch 'master' of https://github.com/SoftwareTechnologyCourse/Agriculture_Farm_Manager
 	<h3>to connect clic  <a href="se connecter.jsp">here</a></h3>
 	<%@ include file="menu.jsp"%> 
 	<%@ include file="footer.jsp"%>
