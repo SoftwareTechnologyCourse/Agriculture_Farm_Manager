@@ -1,0 +1,26 @@
+
+table
+{ 
+   margin: auto;
+   border: 4px outset #DAFAC9;
+   border-collapse: collapse;
+}
+
+th
+{
+   /*background-color: #006600;
+   color: white;*/
+   border: 1px solid black;
+   font-size: 1.1em;
+   font-family: Arial, "Arial Black", Times, "Times New Roman", serif;
+}
+
+td
+{
+   height: 30px; 
+   vertical-align: middle; 
+   border: 1px solid #003399;
+   font-family: "Comic Sans MS", "Trebuchet MS", Times, "Times New Roman", serif;
+   text-align: center;
+   padding: 5px;
+}
