@@ -17,7 +17,7 @@ public class Connect {
 		String Driver = "org.gjt.mm.mysql.Driver";
 		String url = "jdbc:mysql://localhost/gfadatabase";
 
-		//Driver charging
+		// Driver charging
 		try {
 			Class.forName(Driver);
 		} catch (ClassNotFoundException e) {
@@ -34,7 +34,7 @@ public class Connect {
 		}
 
 	}
-		// Add data to the data base
+	// Add data to the data base
 
 	public void setData(String requette) {
 		try {
