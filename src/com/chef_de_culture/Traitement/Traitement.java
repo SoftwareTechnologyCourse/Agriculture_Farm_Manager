@@ -55,7 +55,7 @@ public class Traitement extends HttpServlet {
 		out.println("<link href=\"css/table.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" />");
 		out.println("</head>");
 		out.println("<body>");
-		request.getRequestDispatcher("culture chief/header.jsp").include(request, response);
+		request.getRequestDispatcher("chef de culture/en_tete.jsp").include(request, response);
 		out.println("<h1>this is the list of all treatments and operations </h1>");
 		out.println("<form name=\"f\" action=\"Traitement\">");
 		out.println("<fieldset style=\"width: 500px\">");
@@ -105,7 +105,7 @@ public class Traitement extends HttpServlet {
 		out.println("</form>");
 		out.println("</body>");
 		request.getRequestDispatcher("chef de culture/menu.jsp").include(request, response);
-		request.getRequestDispatcher("footer.jsp").include(request, response);
+		request.getRequestDispatcher("pied.jsp").include(request, response);
 		out.println("</html>");
 	}
 }

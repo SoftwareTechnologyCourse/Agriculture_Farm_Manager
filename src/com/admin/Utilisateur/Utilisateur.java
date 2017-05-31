@@ -100,6 +100,10 @@ public class Utilisateur extends HttpServlet {
 		out.println("</div>");
 		out.println(
 				"<input type=\"submit\" value=\"Display\" style=\"color:Black;border-color:#669900;border-style:Groove;height:22px;width:147px;\" >");
+		out.println(
+				"<input type=\"submit\" value=\"Delete\" style=\"color:Black;border-color:#669900;border-style:Groove;height:22px;width:147px;\" >");
+		out.println(
+				"<input type=\"submit\" value=\"Update\" style=\"color:Black;border-color:#669900;border-style:Groove;height:22px;width:147px;\" >");
 		out.println("</fieldset>");
 		out.println("</form>");
 		out.println("</body>");

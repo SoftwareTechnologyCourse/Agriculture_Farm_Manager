@@ -52,7 +52,7 @@ public class Livraison extends HttpServlet {
 		out.println("<link href=\"css/table.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" />");
 		out.println("</head>");
 		out.println("<body>");
-		request.getRequestDispatcher("chef de culture/header.jsp").include(request,response);
+		request.getRequestDispatcher("chef de culture/en_tete.jsp").include(request,response);
 		out.println("<h1>This is the list of delivery </h1>");
 		out.println("<table cellspacing=0 cellpadding=4 rules=all  border=1 style=\"background-color:White;border-color:#3366CC;border-width:1px;border-style:None;width:500px;border-collapse:collapse;\">");
 		out.println("<br>");
@@ -82,7 +82,7 @@ public class Livraison extends HttpServlet {
 	out.println("</form>");
 	out.println("</body>");
 	request.getRequestDispatcher("chef de culture/menu.jsp").include(request,response);
-	request.getRequestDispatcher("footer.jsp").include(request,response);
+	request.getRequestDispatcher("pied.jsp").include(request,response);
 	out.println("</html>");
 }
 }

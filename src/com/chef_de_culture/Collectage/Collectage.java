@@ -53,7 +53,7 @@ public class Collectage extends HttpServlet {
 		out.println("<link href=\"css/table.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" />");
 		out.println("</head>");
 		out.println("<body>");
-		request.getRequestDispatcher("chef de culture/header.jsp").include(request,response);
+		request.getRequestDispatcher("chef de culture/en_tete.jsp").include(request,response);
 		out.println("<h1>This is the list of Picking </h1>");
 		out.println("<form name=\"f\" action=\"Collectage\">");
 		out.println("<fieldset style=\"width: 500px\">");
@@ -105,7 +105,7 @@ public class Collectage extends HttpServlet {
 	out.println("</form>");
 	out.println("</body>");
 	request.getRequestDispatcher("chef de culture/menu.jsp").include(request,response);
-	request.getRequestDispatcher("footer.jsp").include(request,response);
+	request.getRequestDispatcher("pied.jsp").include(request,response);
 	out.println("</html>");
 }
 }
