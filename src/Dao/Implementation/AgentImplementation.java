@@ -66,14 +66,23 @@ public class AgentImplementation implements AgentInterface{
 	}
 
 	@Override
-	public void addProducts() {
-		// TODO Auto-generated method stub
+	public void addProducts(String code, String stock, String name) {
+		connect();
+		
+		String req = "insert into product values '"+code+"',"+"'"+stock+"',"+"'"+name+"'";
+		try {
+			ResultSet result = state.executeQuery(req);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
 	@Override
 	public void sellProduct() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 

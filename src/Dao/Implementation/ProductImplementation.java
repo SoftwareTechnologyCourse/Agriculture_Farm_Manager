@@ -1,12 +1,55 @@
 package Dao.Implementation;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import Dao.Interfaces.ProductInterface;
 
 public class ProductImplementation implements ProductInterface{
 
+	private String URL;
+	private String username;
+	private String password;
+	
+	Connection conn = null;
+	Statement state = null;
+	ResultSet result = null;
+	
+	public void connect(){
+		String Driver = "org.gjt.mm.mysql.Driver";
+		String url = "jdbc:mysql://localhost/gfadatabase";
+		try {
+			Class.forName(Driver);
+		} catch (ClassNotFoundException e) {
+			System.out.println("The class " + Driver + "Is unfound");
+			e.printStackTrace();
+		}
+		// Connect to the data base
+		try {
+			conn = DriverManager.getConnection(url, "root", "");
+			state = conn.createStatement();
+			System.out.println("Connexion done !");
+		} catch (SQLException sqle) {
+			System.out.println("COnnexion failed");
+		}
+	}
+	
+	
 	@Override
-	public void createProduct() {
-		// TODO Auto-generated method stub
+	public void createProduct(String code, String stock, String name) {
+		connect();
+		
+		String req = "insert into product values '"+code+"',"+"'"+stock+"',"+"'"+name+"'";
+		try {
+			ResultSet result = state.executeQuery(req);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
@@ -36,7 +79,6 @@ public class ProductImplementation implements ProductInterface{
 
 	@Override
 	public String getExpireDateProduct() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	
