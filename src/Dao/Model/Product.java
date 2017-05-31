@@ -1,7 +1,17 @@
 package Dao.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Produit")
 public class Product {
+	@Id
+	@Column(name="CODEPRODUIT")
 	private int id;
+	@Column(name="NOMCOMMERCIAL")
 	private String name;
 	private String type;
 	private String supplier;

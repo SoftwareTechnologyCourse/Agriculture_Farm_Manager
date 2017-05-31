@@ -1,6 +1,15 @@
 package Dao.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="instocke")
 public class Stock {
+	@Id
+	@Column(name="CODESTOCK")
 	private int id;
 	private String type;
 	private String inORout;

@@ -1,6 +1,17 @@
 package Dao.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.sun.javafx.beans.IDProperty;
+
+@Entity
+@Table(name="serre")
 public class Greenhouses {
+	@Id
+	@Column(name="CODESER")
 	private int idGH;
 	private Double area;
 	private String owner;

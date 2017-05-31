@@ -1,13 +1,26 @@
 package Dao.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="USER")
 public class OperationOfficer {
+	@Id
+	@Column(name="ID")
 	private int id;
+	
+	@Column(name="NOMUSER")
 	private String name;
 	private String prenoun;
 	private String adress;
 	private int Tel;
 	private int fax;
 	private String date;
+	
+	@Column(name="EMAILUSER")
 	private String email;
 	public OperationOfficer() {
 		super();

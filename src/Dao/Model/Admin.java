@@ -1,13 +1,30 @@
 package Dao.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="user")
 public class Admin {
+	@Id
+	@Column(name="ID")
 	private int id;
+	
+	@Column(name="NOMUSER")
 	private String name;
+	
+	@Column(name="password")
+	private String password;
+	@Column(name="GRADEUSER")
+	private String grade;
 	private String prenoun;
 	private String adress;
 	private int Tel;
 	private int fax;
 	private String date;
+	@Column(name="EMAILUSER")
 	private String email;
 	public Admin(int id, String name, String prenoun, String adress, int tel, int fax, String date, String email) {
 		super();

@@ -1,6 +1,17 @@
 package Dao.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.sun.javafx.beans.IDProperty;
+
+@Entity
+@Table(name="Machine")
 public class Machine {
+	@Id
+	@Column(name="CODEMACHINE")
 	private int idM;
 	private String type;
 	private int age;
