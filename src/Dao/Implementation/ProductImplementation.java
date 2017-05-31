@@ -60,8 +60,18 @@ public class ProductImplementation implements ProductInterface{
 	}
 
 	@Override
-	public void sellProduct() {
-		// TODO Auto-generated method stub
+	public void sellProduct(int id) {
+		connect();
+		String req = "select * from product where id ='"+id+"'";
+		try {
+			ResultSet res = state.executeQuery(req);
+			int idProduct = Integer.parseInt(res.getString("ID"));
+			String req2 = "delete product where id='"+idProduct+"'";
+			state.execute(req2);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
